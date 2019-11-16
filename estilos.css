@@ -1,0 +1,138 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #333;
+    font-family: sans-serif;
+}
+
+h1{
+    font-size: 70px;
+    color: #fff;
+    text-align: center;
+}
+
+.contenedor{
+    width: 100%;
+    margin: auto;
+}
+
+img{
+    width: 100%;
+}
+.persona__columna{
+    margin: 5px;
+}
+.personas .contenedor{
+    display: grid;
+}
+@media(min-width:520px){
+    .personas .contenedor{
+        grid-template-columns: repeat(2,50%);
+    }
+}
+
+@media(min-width:720px){
+    .personas .contenedor{
+        grid-template-columns: repeat(3,33.3%);
+    }
+}
+
+@media(min-width:1024px){
+    .personas .contenedor{
+        grid-template-columns: repeat(4,25%);
+    }
+    .contenedor{
+        width: 1024px;
+    }
+}
+
+@media(min-width:1200px){
+    .contenedor{
+        width: 1200px;
+    }
+}
+
+
+div#info{
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: auto;
+    height: 100%;
+    background-color: rgba(31, 31, 31, 0.9);
+    -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    opacity: 0;
+}
+
+div#imagen:hover div#info{
+    opacity: 1;
+}
+
+p#headline{
+    position: absolute;
+    margin-top: 20px;
+    color: white;
+    -webkit-transition: margin 0.2s;
+    -moz-transition: margin 0.2s;
+    margin-left: -70px;
+    font-size: 21px;
+}
+
+div#imagen:hover p#headline{
+    margin-left: 70px;
+}
+
+/*Estilos Generales*/
+.button {
+	background:#7f8c8d;
+	color:#fff;
+	display:inline-block;
+	font-size:1.25em;
+	margin:20px;
+	padding:10px 0;
+	text-align:center;
+	width:200px;
+	text-decoration:none;
+	box-shadow:0px 3px 0px #373c3c;
+}
+ 
+.button span {
+	margin-right:10px;
+}
+ 
+/*Colores*/
+.button.blue {
+	background:#3498db;
+	box-shadow:0px 3px 0px #266792;
+}
+ 
+.button.yellow {
+	background:#e67e22;
+	box-shadow:0px 3px 0px #b55704;
+}
+ 
+ 
+/*Tamaños*/
+.button.medium {
+	width:350px;
+}
+ 
+ 
+.button.large {
+	width:450px;
+}
+ 
+ 
+.button.radius {
+	border-radius:50px;
+}
+ 
+/*Efectos, Hover*/
+.button:hover {
+	box-shadow:0px 0px 0px;
+	padding-top:7px;
+}
