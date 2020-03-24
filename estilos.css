@@ -25,15 +25,48 @@ img{
 .personas .contenedor{
     display: grid;
 }
+
+@media(min-width:0px){
+    .personas .contenedor{
+        grid-template-columns: repeat(1,100%);
+    }
+
+    p.nounderlineTitle{
+        font-size: 250%;
+    }
+
+    p.nounderlines{
+        font-size: 200%
+    }
+    
+}
+
 @media(min-width:520px){
     .personas .contenedor{
         grid-template-columns: repeat(2,50%);
     }
+
+    p.nounderlineTitle{
+        font-size: 180%;
+    }
+
+    p.nounderlines{
+        font-size: 130%
+    }
+    
 }
 
 @media(min-width:720px){
     .personas .contenedor{
         grid-template-columns: repeat(3,33.3%);
+    }
+
+    p.nounderlineTitle{
+        font-size: 160%;
+    }
+
+    p.nounderlines{
+        font-size: 135%
     }
 }
 
@@ -44,11 +77,27 @@ img{
     .contenedor{
         width: 1024px;
     }
+
+    p.nounderlineTitle{
+        font-size: 160%;
+    }
+
+    p.nounderlines{
+        font-size: 135%
+    }
 }
 
 @media(min-width:1200px){
     .contenedor{
         width: 1200px;
+    }
+
+    p.nounderlineTitle{
+        font-size: 160%;
+    }
+
+    p.nounderlines{
+        font-size: 135%
     }
 }
 
@@ -73,7 +122,7 @@ div#imagen:hover div#info{
 }
 
 p#headline{
-    position: absolute;
+    position: relative;
     margin-top: 20px;
     color: white;
     -webkit-transition: margin 0.2s;
@@ -135,4 +184,30 @@ div#imagen:hover p#headline{
 .button:hover {
 	box-shadow:0px 0px 0px;
 	padding-top:7px;
+}
+
+ a.nounderline:link{
+    text-decoration: none;
+
+}
+
+p.nounderlines{
+    color: #eeff00;
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+
+p.nounderlineTitle{
+    position: relative;
+    margin-top: 15%;
+    color: white;
+    -webkit-transition: margin 0.2s;
+    -moz-transition: margin 0.2s;
+    margin-left: -100%;
+    text-align: center;
+}
+
+div#imagen:hover p.nounderlineTitle{
+    margin-left: 0%;
 }
